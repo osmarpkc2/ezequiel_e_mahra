@@ -90,7 +90,7 @@ function iniciarContador() {
   const tempoElemento = document.getElementById('tempo');
   if (!tempoElemento) return;
 
-  const dataInicio = new Date('2023-06-12T00:00:00');
+  const dataInicio = new Date('2022-06-12T00:00:00');
 
   function atualizarContador() {
     const agora = new Date();
