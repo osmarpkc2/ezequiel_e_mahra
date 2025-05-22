@@ -3,23 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Feliz Dia dos Namorados 💖</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Feliz Dia dos Namorados💖</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-   <!-- Escala corretamente em todos os dispositivos -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Android / Chrome -->
-<meta name="theme-color" content="#ff85c1">
+    <meta name="theme-color" content="#D91438">
 
 <!-- iOS Safari - adiciona modo app e muda a barra de status -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-
-    <h1>Feliz Dia dos Namorados, Meu Amor 💘</h1>
+    <h1>Feliz Dia dos Namorados, minha princesa 💘</h1>
   </header>
 
   <section id="contador">
@@ -30,46 +26,71 @@
   <section id="cartinha">
     <h2>Uma cartinha pra você 💌</h2>
     <p>
-       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus officiis velit quaerat dicta dolorum! Corrupti illo commodi neque quaerat laborum fugiat, nihil ut soluta facilis eaque adipisci sit quae omnis.💖
+       Cada instante ao seu lado é especial. Seu sorriso ilumina meus dias e aquece meu coração. Você chegou leve e virou meu mundo de cabeça pra baixo, no melhor sentido. Amo a nossa conexão, o jeito que a gente se entende sem precisar falar.
+        <p>
+        Quero que Deus continue abençoando nosso amor, que a gente siga sempre unido, apoiando e escolhendo um ao outro todos os dias, sou muito grato por ter você na minha vida.
+💖
+       </p>
+
     </p>
   </section>
 
   <section id="fotos">
-    <h2>Nossas Fotos 📸</h2>
-    <div class="galeria">
-        <img src="fotos/img1.png" alt="Foto 1" onclick="abrirModal(this)">
-        <img src="fotos/img2.png" alt="Foto 2" onclick="abrirModal(this)">
-        <img src="fotos/img3.png" alt="Foto 3" onclick="abrirModal(this)">
-        <img src="fotos/img4.png" alt="Foto 4" onclick="abrirModal(this)">
-        <img src="fotos/img5.png" alt="Foto 5" onclick="abrirModal(this)">
-        <img src="fotos/img6.png" alt="Foto 6" onclick="abrirModal(this)">
-        <img src="fotos/img7.png" alt="Foto 7" onclick="abrirModal(this)">
-        <img src="fotos/img8.png" alt="Foto 8" onclick="abrirModal(this)">
-        <img src="fotos/img9.png" alt="Foto 9" onclick="abrirModal(this)">
-        <img src="fotos/img10.png" alt="Foto 10" onclick="abrirModal(this)">
-      <!-- Adicione mais fotos aqui -->
-    </div>
-  </section>
+  <h2>Nossas Mídias 📸</h2>
+  <div class="galeria">
+    <video src="fotos/vd1.mp4" onclick="abrirModal(this)" controls></video>
+    <img src="fotos/img1.jpg" alt="Foto 1" onclick="abrirModal(this)">
+    <img src="fotos/img2.jpg" alt="Foto 2" onclick="abrirModal(this)">
+    <img src="fotos/img3.jpg" alt="Foto 3" onclick="abrirModal(this)">
+    <img src="fotos/img4.png" alt="Foto 4" onclick="abrirModal(this)">
+    <img src="fotos/img5.jpg" alt="Foto 5" onclick="abrirModal(this)">
+    <img src="fotos/img6.jpg" alt="Foto 6" onclick="abrirModal(this)">
+    <img src="fotos/img7.jpg" alt="Foto 7" onclick="abrirModal(this)">
+  </div>
+</section>
+
 
   <section id="musicas">
     <h2>Músicas que lembram nós dois 🎶</h2>
-    ainda bem
-    <audio src="musica1.mp3" controls></audio>
-    natanzinho lima
-    <audio src="musica2.mp3" controls></audio>
-    <!-- Adicione mais músicas aqui -->
+
+    <div class="musica">
+      <h3>Lourena e Sant - Dizeres</h3>
+      <audio src="musica1.mp3" controls></audio>
+    </div>
+
+    <div class="musica">
+      <h3>ANAVITÓRIA - Cor de Marte</h3>
+      <audio src="musica2.mp3" controls></audio>
+    </div>
+
+    <div class="musica">
+      <h3>Jorge & Mateus - Os Anjos Cantam</h3>
+      <audio src="musica3.mp3" controls></audio>
+    </div>
+
+    <div class="musica">
+      <h3>Matheus & Kauan - Que Sorte A Nossa</h3>
+      <audio src="musica4.mp3" controls></audio>
+    </div>
+
+    <div class="musica">
+      <h3>Anna Of The North - Lovers</h3>
+      <audio src="musica5.mp3" controls></audio>
+    </div>
   </section>
 
   <footer>
-    <p>EU TE AMO ❤️</p>
+    <p>Eu te AMO muitooooo Bebeto! ❤️</p>
   </footer>
 
- <!-- Modal -->
-<div id="modal" class="modal" onclick="fecharModal()">
-    <span class="fechar" onclick="fecharModal()">&times;</span>
-    <img id="imagemModal" src="" alt="Imagem em destaque" />
-  </div>
-  
+  <!-- Modal -->
+  <div id="modal" class="modal" onclick="fecharModal(event)">
+  <span class="fechar" onclick="fecharModal(event)">&times;</span>
+  <img id="imagemModal" src="" alt="Imagem em destaque" />
+</div>
+
+
+
   <script src="script.js"></script>
 </body>
 </html>

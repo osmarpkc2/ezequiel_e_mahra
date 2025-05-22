@@ -1,139 +1,233 @@
-/* Estilo base do corpo da página */
+/* Fonte e Reset */
 body {
-  font-family: 'Arial', sans-serif; /* Fonte mais jovem e divertida */
-  background: linear-gradient(146363deg,  #e383b6, #ffe6f0, #e383b6); /* Degradê suave e vibrante */
-  color: #a80050; /* Rosa escuro */
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(146deg, #F2A0B6, #fff0f5, #F2A0B6);
+  color: #40010D;
   margin: 0;
   padding: 0;
   text-align: center;
-  overflow-x: hidden; /* Evita rolagem horizontal */
+  overflow-x: hidden;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
-/* Cabeçalho com cor vibrante e sombra */
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header */
 header {
-  background: linear-gradient(0deg, #ff4da6, #ff85c1); /* Rosa vibrante */
+  background: linear-gradient(#D91438);
   padding: 25px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 12px rgba(64, 1, 13, 0.4);
   border-radius: 0 0 20px 20px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 header h1 {
   font-size: 2.8rem;
   margin: 0;
   color: #fff;
-  text-shadow: 2px 2px #c2185b;
+  text-shadow: 2px 2px #40010D;
 }
 
-/* Seções como cartinha, contador e músicas */
+/* Seções */
 section {
   margin: 40px 20px;
   padding: 30px;
-  background: rgba(255, 192, 203, 0.2);
+  background: linear-gradient(145deg, rgba(242, 160, 182, 0.25), #fffafc);
   border-radius: 20px;
-  box-shadow: 0 0 18px rgba(255, 105, 180, 0.4);
+  box-shadow: 0 0 18px rgba(166, 10, 67, 0.3);
+  animation: fadeIn 1s ease-in-out;
 }
 
-/* Título das seções */
 h2 {
   font-size: 1.8rem;
-  color: #ff4081;
+  color: #A60A43;
   margin-bottom: 15px;
 }
 
-/* Contador de tempo */
+/* Contador */
 #tempo {
   font-size: 2.2rem;
   font-weight: bold;
-  color: #ff1493;
+  color: #40010D;
 }
 
-/* Galeria de fotos com estilo animado */
+/* Texto geral */
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #40010D;
+}
+
+/* Galeria */
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 18px;
   margin: 20px 0;
   justify-items: center;
+  animation: fadeIn 1s ease-in-out;
 }
 
-.galeria img {
+.galeria img,
+.galeria video {
   width: 100%;
   max-width: 180px;
   height: auto;
   object-fit: cover;
   border-radius: 14px;
-  border: 4px solid #ff69b4;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  border: 4px solid #F25E95;
+  box-shadow: 0 6px 15px rgba(64, 1, 13, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.galeria img:hover {
-  transform: scale(1.1) rotate(-2deg);
-  box-shadow: 0 10px 25px rgba(255, 20, 147, 0.6);
-}
-
-/* Áudio e vídeo */
-audio {
-  width: 100%;
-  max-width: 360px;
-  margin: 10px auto;
-  border: 2px solid #ff69b4;
-  border-radius: 25px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Rodapé amoroso */
-footer {
-  margin-top: 40px;
-  padding: 20px;
-  background: #ff85c1;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.5rem;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 20px 20px 0 0;
-  text-shadow: 1px 1px #88003c;
-}
-
-/* Modal para ver as imagens */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.85);
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.modal img {
-  max-width: 90%;
-  max-height: 80%;
-  display: block;
-  margin: auto;
-}
-
-.fechar {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
   cursor: pointer;
 }
 
-.fechar:hover,
-.fechar:focus {
-  color: #ff4081;
+.galeria img:hover,
+.galeria video:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 10px 25px rgba(64, 1, 13, 0.6);
 }
 
-/* Responsividade para celulares */
+/* Músicas */
+#musicas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.musica {
+  background: url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat, rgba(242, 160, 182, 0.25);
+  border: 2px solid #F25E95;
+  border-radius: 20px;
+  padding: 15px 20px;
+  margin: 15px 0;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(64, 1, 13, 0.2);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.musica h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #40010D;
+  font-weight: bold;
+  text-shadow: 1px 1px #F2A0B6;
+}
+
+/* Estilização de audio */
+audio {
+  width: 100%;
+  background: #fff0f5;
+  border-radius: 10px;
+  border: 2px solid #F25E95;
+  padding: 5px;
+  box-shadow: 0 2px 6px rgba(166, 10, 67, 0.2);
+}
+
+/* Rodapé */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #A60A43;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  box-shadow: 0 -4px 10px rgba(64, 1, 13, 0.3);
+  border-radius: 20px 20px 0 0;
+  text-shadow: 1px 1px #40010D;
+}
+
+/* Botão de voltar ao topo */
+#voltar-topo {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #F25E95;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(64, 1, 13, 0.4);
+  border: 2px solid #A60A43;
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+#voltar-topo:hover {
+  transform: scale(1.1) rotate(-10deg);
+}
+
+/* Modal fundo cobrindo toda a tela */
+.modal {
+  display: none; /* começa escondido */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+/* Modal visível só quando abrir (remova display: none em JS) */
+.modal.show {
+  display: flex;
+}
+
+/* Container do conteúdo dentro do modal (imagem ou vídeo) */
+.modal-conteudo {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.6);
+  cursor: default;
+  object-fit: contain;
+  background: black; /* para vídeo ficar com fundo preto */
+  display: block;
+}
+
+/* Estilos para vídeo dentro do modal */
+.modal-conteudo video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Botão fechar (X) */
+.fechar {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10000;
+}
+
+/* Responsivo */
 @media (max-width: 600px) {
   h1 {
     font-size: 2rem;
@@ -143,16 +237,30 @@ footer {
     font-size: 1.4rem;
   }
 
-  .galeria {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
+  section {
+    padding: 20px;
   }
 
-  .galeria img {
+  .galeria {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .galeria img,
+  .galeria video {
     max-width: 100%;
+  }
+
+  .musica {
+    padding: 12px 16px;
   }
 
   audio {
     max-width: 100%;
+  }
+
+  .modal-conteudo {
+    max-width: 95vw;
+    max-height: 95vh;
   }
 }
