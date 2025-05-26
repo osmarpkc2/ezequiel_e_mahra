@@ -1,7 +1,13 @@
+console.log('Script carregado!');
 let videoOriginal = null;
 
 // Função para disparar confetes rosa
 function lancarConfeteRosa() {
+  console.log('Função lancarConfeteRosa() chamada');
+  if (typeof confetti === 'undefined') {
+    console.error('Erro: A biblioteca confetti não foi carregada corretamente');
+    return;
+  }
   // Cores em tons de rosa
   const coresRosas = [
     '#ff69b4', // rosa quente
@@ -102,7 +108,23 @@ function fecharModal() {
   }
 }
 
+// Torna a função disponível globalmente
+window.criarEfeitoBombinhas = function() {
+  console.log('Iniciando criarEfeitoBombinhas...');
+  lancarConfeteRosa();
+  
+  // Configura o intervalo para disparar confetes
+  const intervalo = setInterval(lancarConfeteRosa, 100);
+  
+  // Para o efeito após 3 segundos
+  setTimeout(() => {
+    clearInterval(intervalo);
+    console.log('Efeito de confetes finalizado');
+  }, 3000);
+};
+
 window.addEventListener('load', () => {
+  console.log('Página carregada, iniciando efeitos...');
   // Disparar o efeito de bombinhas
   criarEfeitoBombinhas();
   
