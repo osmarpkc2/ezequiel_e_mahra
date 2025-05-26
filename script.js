@@ -1,5 +1,48 @@
 let videoOriginal = null;
 
+// Função para disparar confetes rosa
+function lancarConfeteRosa() {
+  // Cores em tons de rosa
+  const coresRosas = [
+    '#ff69b4', // rosa quente
+    '#ff1493', // rosa profundo
+    '#db7093', // rosa pálido
+    '#ffb6c1', // rosa claro
+    '#ff69b4', // rosa quente novamente para mais frequência
+    '#ff1493'  // rosa profundo novamente para mais frequência
+  ];
+
+  // Configuração do confete
+  const config = {
+    particleCount: 150, // Quantidade de partículas
+    spread: 360, // Espalhamento de 360 graus
+    startVelocity: 30, // Velocidade inicial
+    decay: 0.9, // Decaimento da velocidade
+    gravity: 0.5, // Gravidade
+    colors: coresRosas,
+    ticks: 200, // Duração da animação
+    origin: { 
+      x: Math.random(), // Posição X aleatória na tela
+      y: Math.random() * 0.5 // Começa na parte superior da tela
+    },
+    zIndex: 1000
+  };
+
+  // Disparar confete
+  confetti(config);
+}
+
+// Função para criar o efeito de bombinhas por 3 segundos
+function criarEfeitoBombinhas() {
+  // Disparar confetes em intervalos curtos
+  const intervalo = setInterval(lancarConfeteRosa, 100);
+  
+  // Parar após 3 segundos
+  setTimeout(() => {
+    clearInterval(intervalo);
+  }, 3000);
+}
+
 // Função para abrir o modal e exibir a imagem ou vídeo
 function abrirModal(element) {
   const modal = document.getElementById('modal');
@@ -60,6 +103,9 @@ function fecharModal() {
 }
 
 window.addEventListener('load', () => {
+  // Disparar o efeito de bombinhas
+  criarEfeitoBombinhas();
+  
   const galeria = document.querySelector('.galeria');
   if (!galeria) return;
 
